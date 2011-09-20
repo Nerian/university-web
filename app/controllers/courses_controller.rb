@@ -39,6 +39,13 @@ class CoursesController < ApplicationController
 
   def directory
 
+  end    
+  
+  def search                          
+    @course = Course.find(params[:id])
+    search_key = params[:key]
+
+    @results = Course.search(:description => search_key, :notes => search_key)
   end
 
   private

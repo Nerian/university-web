@@ -34,8 +34,8 @@ University::Application.routes.draw do
   end
 
   resources :courses do
-    member do 
-      get :search, :controller => 'Courses::Search'
+    member do
+      get :search 
       post :notes
       get  :directory
     end

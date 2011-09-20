@@ -1,0 +1,6 @@
+- content_for :bucket do
+	- if @results
+		- @results.each do |result|
+			= result.inspect
+			
+= render :partial => "layout"
